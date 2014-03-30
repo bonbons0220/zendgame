@@ -1,0 +1,40 @@
+#!/bin/bash
+
+function show_usage {
+
+    echo ""
+    echo "Sets website permissions to start (chmod 777) and stop (chmod 755) "
+    echo "editing all php files found in current directory, recursively."
+    echo "Sets website permissions to start (chmod 777) and stop (chmod 755) editing all php files found in current directory, recursively."
+    echo ""
+    echo "Usage: "
+    echo ""
+    echo "  $0 start"
+    echo "  $0 stop"
+    exit 1
+}
+
+if [ $# -ne 1 ]; then
+    show_usage
+else # There is one argument
+    if [ $1 = 'start' ]; then
+        chown -R www-data:www-data /var/www/*
+		chmod -R 775 /var/www/*
+		find -name '*.php' | xargs -d '\n' chmod 664
+        find -name '*.js' | xargs -d '\n' chmod 664
+        find -name '*.css' | xargs -d '\n' chmod 664
+        chmod -R 775 /var/www/devtools/*
+    else
+        if [ $1 = 'stop' ]; then
+			chmod -R 755 /var/www/*
+            find -name '*.php' | xargs -d '\n' chmod 644
+            find -name '*.js' | xargs -d '\n' chmod 644
+            find -name '*.css' | xargs -d '\n' chmod 644
+			chmod -R 755 /var/www/*
+			chown -R root:root /var/www/admin/devtools
+			chmod -R 755 /var/www/devtools/*
+        else
+            show_usage
+        fi
+    fi
+fi

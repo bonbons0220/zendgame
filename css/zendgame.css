@@ -1,0 +1,85 @@
+body {
+	background-color:blue;
+	padding:0;}
+.main {
+	margin-top:0px;
+	margin-right:auto;
+	margin-left:auto;
+	width:600px;
+	background-color:white;
+}
+.nav{
+float: left;
+}
+.content {
+float: right;
+}
+.clear {
+clear: all;
+}
+p.p1 { font-family:Verdana, Arial, Helvetica, sans-serif; }
+
+.arial {
+	font-family:Arial;
+}
+
+.helvetica {
+	font-family:Helvetica;
+}
+
+.timesnewroman {
+	font-family:"Times New Roman";
+}
+
+.times {
+	font-family:Times;
+}
+
+.couriernew {
+	font-family:"Courier New";
+}
+
+.courier {
+	font-family:"Courier";
+}
+
+.verdana {
+	font-family:Verdana;
+}
+
+.georgia {
+	font-family:Georgia;
+}
+
+.comicsansms {
+	font-family:"Comic Sans MS";
+}
+
+.trebuchetms{
+	font-family:"Trebuchet MS";
+}
+
+.arialblack {
+	font-family:"Arial Black";
+}
+
+.impact {
+	font-family:Impact;
+}
+
+.palantino {
+	font-family:Palantino;
+}
+
+.garamond {
+	font-family:Garamond;
+}
+
+.bookman {
+	font-family:Bookman;
+}
+
+.avantgarde {
+	font-family:"Avant Garde";
+}
+
